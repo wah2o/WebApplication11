@@ -93,8 +93,8 @@ namespace WebApplication11
             services.AddMvc();
             services.AddMvc(config =>
             {
-                var policy = new AuthorizationPolicyBuilder()
-                                 .RequireAuthenticatedUser()
+               var policy = new AuthorizationPolicyBuilder()
+                                .RequireAuthenticatedUser()
                                  .Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
